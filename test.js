@@ -112,8 +112,7 @@ describe('expect-to', () => {
           expect('foo')
             .to(be('bar'))
             .to(not(be('foo'))),
-        (err) => err.message === 'expect-to assertion failure: expected "foo" to be "bar"'
-
+        (err) => err.message === 'expect-to assertion failure: expected \'foo\' to be \'bar\''
       )
 
       test.throws(
@@ -121,7 +120,7 @@ describe('expect-to', () => {
           expect('foo')
             .to(not(be('foo')))
             .to(be('bar')),
-        (err) => err.message === 'expect-to assertion failure: expected "foo" not to be "foo"'
+        (err) => err.message === 'expect-to assertion failure: expected \'foo\' not to be \'foo\''
       )
     })
   })
